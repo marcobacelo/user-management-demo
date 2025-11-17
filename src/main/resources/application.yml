@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    user:
+      name: user
+      password: TESTE_SKY
+      roles: ADMIN
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo
+    username: user
+    password: pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    root: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
