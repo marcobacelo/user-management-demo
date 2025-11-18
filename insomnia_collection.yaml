@@ -1,0 +1,174 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1748816113327
+  modified: 1748816113327
+  description: ""
+collection:
+  - name: USER MANAGEMENT
+    meta:
+      id: fld_a1ac68cf8a714a7784ea7f60492300d7
+      created: 1754856212122
+      modified: 1754856231519
+      sortKey: -1754856212422
+      description: ""
+    children:
+      - url: http://localhost:8080/users
+        name: LIST USERS
+        meta:
+          id: req_c2a092961a9848cb92eba16570710037
+          created: 1763396250857
+          modified: 1763396668219
+          isPrivate: false
+          description: ""
+          sortKey: -1763396295735
+        method: GET
+        authentication:
+          username: user
+          password: TESTE_SKY
+          type: basic
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/users/eb78fe8e-40fb-48bb-ab10-243d64f85eb2
+        name: FIND USER
+        meta:
+          id: req_f77868b5147b49b894d8bf0f34e2279e
+          created: 1763396434804
+          modified: 1763423646279
+          isPrivate: false
+          description: ""
+          sortKey: -1763396320333.5
+        method: GET
+        authentication:
+          username: user
+          password: TESTE_SKY
+          type: basic
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/users/6bc3f275-4156-454f-a207-480086aff37a
+        name: UPDATE USER
+        meta:
+          id: req_ff099322f8ef4b41a6da596bf184be89
+          created: 1763396488004
+          modified: 1763424439036
+          isPrivate: false
+          description: ""
+          sortKey: -1763396295635
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Marco Soares",
+            	"email": "marcobacelo@hotmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          username: user
+          password: TESTE_SKY
+          type: basic
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/users/eb78fe8e-40fb-48bb-ab10-243d64f85eb2
+        name: DELETE USER
+        meta:
+          id: req_a146332cf5ae42d185590316e817d8c5
+          created: 1763396572424
+          modified: 1763423658442
+          isPrivate: false
+          description: ""
+          sortKey: -1763396295535
+        method: DELETE
+        authentication:
+          username: user
+          password: TESTE_SKY
+          type: basic
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/users
+        name: CREATE USERS
+        meta:
+          id: req_09a2cbcfd70e4aec9c7f7237db8806cd
+          created: 1763403143801
+          modified: 1763423630427
+          isPrivate: false
+          description: ""
+          sortKey: -1763396320433.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "marcobacelo90@gmail.com",
+            	"password": "123456",
+            	"name": "Marco Bacelo"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        authentication:
+          username: user
+          password: TESTE_SKY
+          type: basic
+          useISO88591: true
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748830294190
+    modified: 1763403916581
+  cookies:
+    - key: JSESSIONID
+      value: 9A79A3C181F1E0CE389D57B01210E31E
+      domain: localhost
+      path: /
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-11-17T16:24:59.178Z
+      lastAccessed: 2025-11-17T18:25:16.581Z
+      id: 02ed092c-77c9-459b-a669-1dd02ee1ef6e
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1748830294189
+    modified: 1754859302312
+    isPrivate: false
+  data:
+    token_management_url: localhost:8080
+    "": ""

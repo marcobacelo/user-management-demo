@@ -2,11 +2,6 @@ server:
   port: 8080
 
 spring:
-  security:
-    user:
-      name: user
-      password: TESTE_SKY
-      roles: ADMIN
 
   datasource:
     url: jdbc:postgresql://localhost:5432/demo

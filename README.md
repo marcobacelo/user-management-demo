@@ -7,15 +7,15 @@ A senior-level backend project built with **Java 17**, **Spring Boot
 
 ## 📦 Technologies Used
 
--   Java 17\
--   Spring Boot 3.3\
--   Spring Web\
--   Spring Security (Basic Auth)\
--   Spring Data JPA\
--   Hibernate\
--   PostgreSQL\
--   Docker & Docker Compose\
--   JUnit 5\
+-   Java 17
+-   Spring Boot 3.3
+-   Spring Web
+-   Spring Security (Basic Auth)
+-   Spring Data JPA
+-   Hibernate
+-   PostgreSQL
+-   Docker & Docker Compose
+-   JUnit 5
 -   Swagger / OpenAPI
 
 ------------------------------------------------------------------------
@@ -130,8 +130,8 @@ Disponível em:
 
 ## 💡 Notes
 
--   Docker Compose inclui o PostgreSQL automaticamente.\
--   O banco é acessível como: `jdbc:postgresql://db:5432/demo`\
+-   Docker Compose inclui o PostgreSQL automaticamente.
+-   O banco é acessível como: `jdbc:postgresql://db:5432/demo
 -   Os testes unitários utilizam Mockito e WebMvcTest.
 
 ------------------------------------------------------------------------

@@ -1,12 +1,16 @@
 package com.usermanagement.demo.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
+import lombok.*;
 
 import java.util.UUID;
 
-@Entity
+@Getter
+@Setter
 @Builder
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tb_user_external_project")
 public class ExternalProject {
 

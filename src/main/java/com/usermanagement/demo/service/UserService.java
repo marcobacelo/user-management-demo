@@ -11,6 +11,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -41,6 +44,19 @@ public class UserService {
         return new UserResponse(u.getId(), u.getEmail(), u.getName());
     }
 
+    public List<UserResponse> getAll() {
+        List<User> users = Optional.of(repository.findAll())
+                .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
+
+        List<UserResponse> usersResponse = new ArrayList<>();
+
+        users.forEach(index -> {
+            var userItem = new UserResponse(index.getId(), index.getEmail(), index.getName());
+            usersResponse.add(userItem);
+        });
+        return usersResponse;
+    }
+
     public void delete(UUID id) {
         if (!repository.existsById(id))
             throw new NotFoundException("Usuário não encontrado");
@@ -52,6 +68,7 @@ public class UserService {
                 .orElseThrow(() -> new NotFoundException("Usuário não encontrado"));
 
         if (req.name() != null) u.setName(req.name());
+        if (req.email() != null) u.setEmail(req.email());
 
         repository.save(u);
         return new UserResponse(u.getId(), u.getEmail(), u.getName());

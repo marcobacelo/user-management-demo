@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -26,6 +27,11 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> get(@PathVariable UUID id) {
         return ResponseEntity.ok(service.get(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<UserResponse>> getAll() {
+        return ResponseEntity.ok(service.getAll());
     }
 
     @PatchMapping("/{id}")
